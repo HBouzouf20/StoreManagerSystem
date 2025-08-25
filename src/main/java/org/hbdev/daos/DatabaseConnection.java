@@ -19,7 +19,7 @@ public class DatabaseConnection {
         try {
             // ONLY WITH H2 DATABASE Start H2 web console only once
             if (webServer == null) {
-                webServer = Server.createWebServer("-webAllowOthers").start();
+                webServer = Server.createWebServer("-webAllowOthers", "-tcpAllowOthers", "-tcpPort", "9092").start();
                log.info("H2 Web console started at: {}", webServer.getURL());
             }
             // Connect to embedded H2 database

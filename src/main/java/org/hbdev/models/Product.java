@@ -9,13 +9,12 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Product {
-    @Builder.Default
-    private int id = generateId(); //Automatically generated
+    private int id; //Automatically generated
     @NonNull
     private String name;
     private String description;
     @NonNull
-    private int price;
+    private double price;
     @NonNull
     private int quantity;
     private String sku;
@@ -23,8 +22,16 @@ public class Product {
 
     private static int PRODUCT_NUMBER;
 
-    private static int generateId() {
-        return ++PRODUCT_NUMBER;
+    @Override
+    public String toString() {
+        return """
+            🆔 ID: %d
+            🏷️ Name: %s
+            📝 Description: %s
+            💰 Price: %.2f
+            📦 Quantity: %d
+            🔖 SKU: %s
+            """.formatted(id, name, description == null ? "-" : description, price, quantity, sku == null ? "-" : sku);
     }
 
 }
