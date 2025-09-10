@@ -1,7 +1,7 @@
 package org.hbdev.seeders;
 
 import net.datafaker.Faker;
-import org.hbdev.models.Product;
+import org.hbdev.entities.Product;
 
 import java.util.Locale;
 

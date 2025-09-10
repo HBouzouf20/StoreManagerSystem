@@ -1,14 +1,20 @@
-package org.hbdev.models;
+package org.hbdev.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
 
 @Data
-
+@Entity
 @Builder //PatternDesign
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id; //Automatically generated
     @NonNull
     private String name;
@@ -18,9 +24,6 @@ public class Product {
     @NonNull
     private int quantity;
     private String sku;
-
-
-    private static int PRODUCT_NUMBER;
 
     @Override
     public String toString() {
