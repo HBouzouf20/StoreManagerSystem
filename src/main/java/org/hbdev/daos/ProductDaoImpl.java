@@ -1,7 +1,7 @@
 package org.hbdev.daos;
 
 import lombok.extern.slf4j.Slf4j;
-import org.hbdev.models.Product;
+import org.hbdev.entities.Product;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -127,4 +127,14 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> findInStockProducts() {
         return List.of();
     }
+
+    /**
+     * @param product
+     */
+    @Override
+    public void notify(Product product) {
+
+    }
+
+
 }

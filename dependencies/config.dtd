@@ -1,0 +1,6 @@
+<!ELEMENT beans (bean*)>
+
+        <!ELEMENT bean EMPTY>
+        <!ATTLIST bean
+                name    CDATA   #REQUIRED
+                value   CDATA   #REQUIRED>

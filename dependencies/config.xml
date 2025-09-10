@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "config.dtd">
+
+<beans>
+    <bean name="discount_dao" value="org.hbdev.daos.DiscountDaoV2Impl"/>
+    <bean name="product_mapper" value="org.hbdev.mappers.ProductMapperImpl"/>
+    <bean name="product_dao" value="org.hbdev.daos.Spring.ProductSpringDaoImpl"/>
+    <bean name="product_service" value="org.hbdev.services.ProductServiceImpl"/>
+</beans>
